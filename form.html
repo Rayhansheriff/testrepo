@@ -1,0 +1,51 @@
+ <html>
+<head>
+<title>Form</title>
+</head>
+<body>
+
+<form onsubmit="return validateForm()">
+  
+  <label for="firstname">First Name:</label>
+  <input type="text" id="firstname"><br><br>
+
+  <label for="lastname">Last Name:</label>
+  <input type="text" id="lastname"><br><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password"><br><br>
+
+  <label for="retype">Retype Password:</label>
+  <input type="password" id="retype"><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email"><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" min="1"><br><br>
+
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday"><br><br>
+
+  <input type="submit" value="Register">
+
+</form>
+
+<script>
+function validateForm() {
+  let x = document.getElementById("firstname","lastname","password","email","age","birthday",).value;
+
+  if (x.trim() === "") {
+    alert("firstname must be filled out");
+    alert("lastname must be filled out");
+    alert("password must be filled out");
+    alert("email must be filled out");
+    alert("age must be filled out")
+    alert("birthday must be filled out");
+    return false;   // prevents form submission
+  }
+}
+</script>
+
+</body>
+</html>
