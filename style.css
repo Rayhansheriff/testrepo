@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: #f2f2f2;
+}
+
+.picture {
+    width: 250px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.picture:hover {
+    transform: scale(1.05);
+}
+
+#paragraphBox p {
+    background: white;
+    width: 60%;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #aaa;
+    font-size: 18px;
+}
+
