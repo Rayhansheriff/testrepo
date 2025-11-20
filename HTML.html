@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Click Paragraph</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background: #f7f7f7;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .image {
+            width: 260px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .paragraph {
+            background: white;
+            margin: 15px auto;
+            padding: 15px;
+            width: 80%;
+            font-size: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(10px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Virat </h1>
+
+    <div class="container">
+        <img src="c:\Users\User\Desktop\valu added\vk.jpr.avif" id="imageClick" class="image" alt="Clickable Image">
+
+        <!-- Paragraphs will appear here -->
+        <div id="textArea"></div>
+    </div>
+
+    <script>
+        document.getElementById("imageClick").addEventListener("click", function() {
+            const textBox = document.getElementById("textArea");
+
+            // Create paragraph
+            const p = document.createElement("p");
+            p.className = "paragraph";
+            p.textContent = 
+
+"In 2013, Kohli was ranked number one in the ICC rankings for ODI batsmen. In 2015, he achieved the summit of T20I rankings. In 2018, the ICC ranked him as the number one test batsman worldwide under the same ICC rankings[4]. In 2020, the International Cricket Council named him the male cricketer of the decade.";
+
+            // Append paragraph
+            textBox.appendChild(p);
+        });
+    </script>
+
+</body>
+</html>
